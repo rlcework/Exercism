@@ -16,4 +16,9 @@ class AnnalynsInfiltration {
             return true;
         } else return !petDogIsPresent && !archerIsAwake && !knightIsAwake && prisonerIsAwake;
     }
-}
+//    public static boolean canFreePrisoner(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake, boolean petDogIsPresent) {
+//        if (petDogIsPresent && !archerIsAwake) {
+//            return true;
+//        } else return !petDogIsPresent && !archerIsAwake && !knightIsAwake && prisonerIsAwake;
+
+    }
