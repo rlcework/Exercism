@@ -5,6 +5,11 @@ public class CarsAssemble {
     }
 
     public int workingItemsPerMinute(int speed) {
-        throw new UnsupportedOperationException("Please implement the CarsAssemble.workingItemsPerMinute() method");
+        int shit = 0;
+        return shit;
     }
+
+//    public int workingItemsPerMinute(int speed) {
+//        throw new UnsupportedOperationException("Please implement the CarsAssemble.workingItemsPerMinute() method");
+//    }
 }
