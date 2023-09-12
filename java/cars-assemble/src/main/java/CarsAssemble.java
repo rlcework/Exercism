@@ -5,7 +5,7 @@ public class CarsAssemble {
     }
 
     public int workingItemsPerMinute(int speed) {
-        int shit = 0;
+        int shit = 1;
         return shit;
     }
 
