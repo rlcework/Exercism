@@ -40,6 +40,22 @@ public class NeedForSpeedTest {
     }
 
     @Test
+    public void drive_does_not_increase_distance_driven_when_battery_drained2() {
+        int speed = 9;
+        int batteryDrain = 45;
+        var car = new NeedForSpeed(speed, batteryDrain);
+
+        // Drain the battery
+        car.drive();
+        car.drive();
+
+        // One extra drive attempt (should not succeed)
+        car.drive();
+
+        assertThat(car.distanceDriven()).isEqualTo(18);
+    }
+
+    @Test
     public void new_remote_control_car_battery_is_not_drained() {
         int speed = 15;
         int batteryDrain = 3;

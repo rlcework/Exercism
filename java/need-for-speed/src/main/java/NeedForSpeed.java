@@ -15,7 +15,7 @@ class NeedForSpeed {
     }
 
     public boolean batteryDrained() {
-        return batteryLeft == 0;
+        return batteryLeft < batteryDrain;
     }
 
     public int distanceDriven() {
@@ -23,10 +23,12 @@ class NeedForSpeed {
     }
 
     public void drive() {
-        batteryLeft -= batteryDrain;
-        if (batteryLeft != 0) {
+
+        if (!batteryDrained()) {
+            batteryLeft -= batteryDrain;
             totalDistance += speed;
         }
+
     }
 }
 
@@ -39,9 +41,7 @@ class RaceTrack {
     }
 
     public boolean tryFinishTrack(NeedForSpeed car) {
-        NeedForSpeed total = new NeedForSpeed(car.speed, car.batteryDrain);
-
-        int x = (total.batteryLeft / total.batteryDrain) * total.speed;
+        int x = (car.batteryLeft / car.batteryDrain) * car.speed;
         return distance <= x;
     }
 }
