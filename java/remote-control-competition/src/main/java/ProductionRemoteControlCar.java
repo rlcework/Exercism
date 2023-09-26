@@ -1,11 +1,12 @@
-class ProductionRemoteControlCar implements RemoteControlCar, Cloneable{
-
+class ProductionRemoteControlCar implements RemoteControlCar {
+    private int distance = 0;
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.drive() method");
+      this.distance += 10;
+
     }
 
     public int getDistanceTravelled() {
-        throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.getDistanceTravelled() method");
+        return distance;
     }
 
     public int getNumberOfVictories() {
