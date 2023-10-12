@@ -1,5 +1,5 @@
 public class ExperimentalRemoteControlCar implements RemoteControlCar, Cloneable {
-    private int distance = 0;
+    private int distance;
     public void drive() {
         this.distance += 20;
 
